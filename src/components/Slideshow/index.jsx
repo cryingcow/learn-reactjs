@@ -7,6 +7,8 @@ import header3 from "../resource/header3.png";
 import header4 from "../resource/header4.png";
 import Carousel from "react-simply-carousel";
 import './style.scss';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 Slideshow.propTypes = {};
 
 function Slideshow(props) {
@@ -43,27 +45,31 @@ function Slideshow(props) {
 
                     forwardBtnProps={{
 
-                        children: ">",
+                        children: <ArrowForwardIosIcon className='button' style={{color: "white"}}/>,
                         style: {
-                            width: 60,
-                            height: 60,
-                            minWidth: 60,
-                            alignSelf: "center",
-
-
+                          width: 60,
+                          height: 60,
+                          minWidth: 60,
+                          alignSelf: "center",
+                          backgroundColor: "transparent",
+                          border: "none"
+              
                         }
-
-
-                    }}
-                    backwardBtnProps={{
-                        children: "<",
+              
+              
+                      }}
+                      backwardBtnProps={{
+                        children: <ArrowBackIosIcon className='button' style={{color: "white"}}/>,
                         style: {
-                            width: 60,
-                            height: 60,
-                            minWidth: 60,
-                            alignSelf: "center",
+                          width: 60,
+                          height: 60,
+                          minWidth: 60,
+                          alignSelf: "center",
+                          backgroundColor: "transparent",
+                          border: "none"
+              
                         }
-                    }}
+                      }}
                     itemsToShow={3}
                     speed={400}
 

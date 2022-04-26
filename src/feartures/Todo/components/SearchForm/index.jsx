@@ -4,7 +4,8 @@ import { useForm } from 'react-hook-form';
 import SelectField from '../../../../components/Form-Control/SelectField';
 import DatePicker from '../../../../components/Form-Control/DatePicker';
 import './style.scss';
-
+import { Button, FormControl } from '@mui/material';
+import SliderField from '../../../../components/Form-Control/SliderField';
 SearchForm.propTypes = {
     onSubmit: PropTypes.func,
 };
@@ -14,7 +15,10 @@ function SearchForm(props) {
         defaultValues: {
             SelectCity: 'DN',
             DatePicker: new Date("2022-05-01"),
-            SelectDuration: '1'
+            SelectDuration: '1',
+            Adults: "1",
+            Childrens:"0",
+            Rooms:"1",
         },
     });
     const city = {
@@ -35,25 +39,21 @@ function SearchForm(props) {
     }
     return (
 
+            
         <form className='SearchForm' onSubmit={form.handleSubmit(handleSubmit)}>
-            <div className='container'>
-                <div className='row'>
-                    <SelectField name="SelectCity" lable='place' data={city} form={form} />
-                </div>
-                <div className='row'>
-                    <div className='col-md-4'>
-                        <DatePicker name="DatePicker" form={form} />
-                    </div>
-                    <div className='col-md-4'>
-                        <SelectField name='SelectDuration' data={date} lable='Duration' form={form} />
-                    </div>
-                    <div className='col-md-2'>
-
-                    </div>
-                </div>
+                    <SelectField name="SelectCity" data={city} label='Thành Phố' form={form} />
+                
+                
+                        <DatePicker name="DatePicker" label='Date' form={form} />
+                
+                    <SelectField name='SelectDuration' data={date} label='Số Đêm' form={form} />
+               
+               <SliderField name='Adults' label='Adults' max={30} form={form}/>
+               <SliderField name='Childrens' label='Childrens' max={6} form={form}/>
+               <SliderField name='Rooms' label='Rooms' max ={8}form={form}/>
                 <button className="Button">Search Hotels</button>
-            </div>
         </form>
+            
     );
 }
 

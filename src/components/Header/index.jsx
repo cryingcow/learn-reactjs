@@ -7,6 +7,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import { color } from '@mui/system';
+import './styles.scss'
 
 Header.propTypes = {
 
@@ -15,8 +17,8 @@ Header.propTypes = {
 function Header(props) {
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
-                <Toolbar>
+            <AppBar className='design' position="static">
+                <Toolbar color="white" >
                     <IconButton
                         size="large"
                         edge="start"

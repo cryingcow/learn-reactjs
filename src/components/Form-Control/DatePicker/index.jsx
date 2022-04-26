@@ -9,10 +9,11 @@ import {
 DatePicker.propTypes = {
     name: PropTypes.string.isRequired,
     form: PropTypes.object.isRequired,
+    label: PropTypes.string,
 };
 
 function DatePicker(props) {
-    const { form, name } = props;
+    const { form, name ,label} = props;
     return (
         <div>
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -25,8 +26,8 @@ function DatePicker(props) {
                             variant="inline"
                             inputVariant="outlined"
                             margin="normal"
+                            label={label}
                             id="date-picker-dialog"
-                            label="Check-in"
                             format="MM/dd/yyyy"
                             KeyboardButtonProps={{
                                 "aria-label": "change date"
