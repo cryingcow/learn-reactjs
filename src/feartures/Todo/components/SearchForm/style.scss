@@ -1,0 +1,26 @@
+.SearchForm {
+    margin: 0 auto;
+    width: 1200px;
+    max-width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: -25px;
+    z-index: 2;
+    background-color: white;
+}
+
+.Button {
+    background-color: rgb(255, 94, 31);
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 14px;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.container {
+    margin: 20px 0;
+}
