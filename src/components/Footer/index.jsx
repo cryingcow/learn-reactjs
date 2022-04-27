@@ -18,54 +18,49 @@ function Footer(props) {
                             <Grid  item xs={12} sm={4}>
                                 <Box borderBottom={1}>Help</Box>
                                 <Box>
-                                    <Link href="/" color="inherit">
+                                    <Link href="/" underline="none" color="inherit">
                                         Contact
                                     </Link>
                                 </Box>
                                 <Box>
-                                    <Link href="/" color="inherit">
+                                    <Link href="/" underline="none" color="inherit">
                                         Support
                                     </Link>
                                 </Box>
                                 <Box>
-                                    <Link href="/" color="inherit">
+                                    <Link href="/" underline="none" color="inherit">
                                         Privacy
                                     </Link>
                                 </Box>
                             </Grid>
                             <Grid  item xs={12} sm={4}>
-                                <Box borderBottom={1}>Help</Box>
+                                <Box borderBottom={1}>Account</Box>
                                 <Box>
-                                    <Link href="/" color="inherit">
-                                        Contact
+                                    <Link href="/" underline="none" color="inherit">
+                                        Login
                                     </Link>
                                 </Box>
                                 <Box>
-                                    <Link href="/" color="inherit">
-                                        Support
-                                    </Link>
-                                </Box>
-                                <Box>
-                                    <Link href="/" color="inherit">
-                                        Privacy
+                                    <Link href="/" underline="none" color="inherit">
+                                        Register
                                     </Link>
                                 </Box>
                             </Grid>
                             <Grid  item xs={12} sm={4}>
-                                <Box borderBottom={1}>Help</Box>
+                                <Box borderBottom={1}>Messages</Box>
                                 <Box>
-                                    <Link href="/" color="inherit">
-                                        Contact
+                                    <Link href="/" underline="none" color="inherit">
+                                        Backup
                                     </Link>
                                 </Box>
                                 <Box>
-                                    <Link href="/" color="inherit">
-                                        Support
+                                    <Link href="/" underline="none" color="inherit">
+                                        History
                                     </Link>
                                 </Box>
                                 <Box>
-                                    <Link href="/" color="inherit">
-                                        Privacy
+                                    <Link href="/" underline="none" color="inherit">
+                                        Roll
                                     </Link>
                                 </Box>
                             </Grid>

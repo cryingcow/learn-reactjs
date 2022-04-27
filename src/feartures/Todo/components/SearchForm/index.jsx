@@ -33,6 +33,7 @@ function SearchForm(props) {
         1: "1 đêm",
         2: "2 đêm",
         3: "3 đêm",
+        4:"4 đêm"
     }
     const handleSubmit = (values) => {
         console.log('test', values);
