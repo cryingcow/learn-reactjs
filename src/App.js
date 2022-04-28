@@ -6,16 +6,21 @@ import Slideshow from './components/Slideshow';
 import SearchForm from './feartures/Todo/components/SearchForm';
 import Footer from './components/Footer';
 import ListHotel from './feartures/Todo/components/ListHotel';
+import { Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
       <div className="Limit">
         <Header />
       </div>
-      <Slideshow />
-      <SearchForm />
-      <ListHotel/>
-      <Footer/>
+      <Routes>
+        <Route path='/' element={<SearchForm />}>
+        </Route>
+        <Route path='/listHotel' element={
+          <ListHotel />}>
+        </Route>
+      </Routes>
+      <Footer />
     </div>
   );
 }

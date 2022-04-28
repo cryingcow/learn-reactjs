@@ -6,6 +6,14 @@ import DatePicker from '../../../../components/Form-Control/DatePicker';
 import './style.scss';
 import { Button, FormControl } from '@mui/material';
 import SliderField from '../../../../components/Form-Control/SliderField';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+import Slideshow from '../../../../components/Slideshow';
+import MyTextField from '../../../../components/Form-Control/MyTextField';
 SearchForm.propTypes = {
     onSubmit: PropTypes.func,
 };
@@ -16,7 +24,7 @@ function SearchForm(props) {
             SelectCity: 'DN',
             DatePicker: new Date("2022-05-01"),
             SelectDuration: '1',
-            Adults: "1",
+            Adults: 1,
             Childrens:"0",
             Rooms:"1",
         },
@@ -40,7 +48,10 @@ function SearchForm(props) {
     }
     return (
 
-            
+        <>
+        
+      <Slideshow />
+         
         <form className='SearchForm' onSubmit={form.handleSubmit(handleSubmit)}>
                     <SelectField name="SelectCity" data={city} label='Thành Phố' form={form} />
                 
@@ -49,12 +60,14 @@ function SearchForm(props) {
                 
                     <SelectField name='SelectDuration' data={date} label='Số Đêm' form={form} />
                
-               <SliderField name='Adults' label='Adults' max={30} form={form}/>
+               {/* <SliderField name='Adults' label='Adults' max={30} form={form}/>
                <SliderField name='Childrens' label='Childrens' max={6} form={form}/>
-               <SliderField name='Rooms' label='Rooms' max ={8}form={form}/>
-                <button className="Button">Search Hotels</button>
+               <SliderField name='Rooms' label='Rooms' max ={8}form={form}/> */}
+               <button type="submit"className="Button">cl que</button>
+            <Link to="/listHotel" > <button type="submit"className="Button">Search Hotels</button></Link>
+            <MyTextField name='Adults' form={form}/>
         </form>
-            
+        </>  
     );
 }
 

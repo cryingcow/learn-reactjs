@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Box } from '@mui/system';
 import { Container, Grid, Link } from '@mui/material';
+import './style.scss';
 
 Footer.propTypes = {
     
@@ -9,8 +10,8 @@ Footer.propTypes = {
 
 function Footer(props) {
     return (
-        <footer>
-                <Box px={{xs:3, sm:10}}
+        <footer className='footer'>
+                <Box px={{xs:3, sm:10} }
                 py={{xs:5,sm:10}}
                  bgcolor="#0770cd" color="white">
                     <Container maxWidth="lg">
@@ -66,7 +67,7 @@ function Footer(props) {
                             </Grid>
                         </Grid>
                         <Box textAlign="center" pt={{sx:5,sm:10}} pb={{xs:5,sm:0}}>
-                            Material UI Workshop &reg; {new Date().getFullYear()}
+                            CryingCow &reg; {new Date().getFullYear()}
                         </Box>
                     </Container>
                 </Box>
