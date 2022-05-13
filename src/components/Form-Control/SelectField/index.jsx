@@ -19,8 +19,10 @@ function SelectField(props) {
             name={name}
             control={form.control}
             render={({ field }) => (
-                <><InputLabel>{label}</InputLabel>
+                <>
+                <InputLabel>{label}</InputLabel>
                 <Select
+                    label={label}
                     fullWidth
                     {...field}>
                     {

@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Controller } from 'react-hook-form';
-import IDInput from '../../../feartures/Todo/components/IDInput';
+import { InputNumber } from 'antd';
+import 'antd/dist/antd.css';
 
 MyTextField.propTypes = {
     name: PropTypes.string.isRequired,
@@ -14,13 +15,9 @@ function MyTextField(props) {
         <Controller
         name={name}
         control={form.control}
-        render={({field: {value,onChange}}) => 
-            <IDInput
-            value={value}
-            onChange={onChange}
-            
-            />
-        }
+        render={({field }) => 
+            <InputNumber {...field}
+            />}
         />
     );
     
